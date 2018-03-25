@@ -12,3 +12,4 @@ function sloppyFunc(){
 sloppyFunc();
 console.log(sloppyVar);//报错
 
+
