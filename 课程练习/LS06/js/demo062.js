@@ -12,6 +12,6 @@ console.log({x:2}||{name:"Jack"});//Object {x:2}
 console.log(null||"hello");//hello
 console.log({}||"world")//Object {}
 
-//\所有对象转换为布尔类型 都为 true
+//所有对象转换为布尔类型 都为 true
 console.log((new Boolean(false))&&234);//234
 console.log((new Boolean(false))||234);

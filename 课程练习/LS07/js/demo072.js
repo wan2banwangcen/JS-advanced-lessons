@@ -1,3 +1,4 @@
+//part1
 //普通函数直接调用
 function test1() {
     console.log("this is",this);
@@ -13,6 +14,7 @@ function test2() {
 }
 test2();//window
 
+//part2
 //对象方法调用
 var obj = {
     name:"obj",
@@ -23,6 +25,17 @@ var obj = {
 };
 obj.test();//调用对象的方法23
 
+//
+var x = 45;
+var test = function(){
+	console.log("输出：",this.x);
+}
+var obj = {
+    x:23
+};
+obj.test = test;
+obj.test();//23   调用对象的方法
+test();//45  调用全局的x
 //给obj动态添加方法
 var sayHi = function () {
     console.log("Hi，i'm",this.name);
