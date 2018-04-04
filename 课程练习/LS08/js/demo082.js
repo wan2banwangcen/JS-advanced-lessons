@@ -2,22 +2,21 @@
 var foo = function (a,b){
     console.log(arguments);//类似数组的一个对象
     //arguments 是Symbol类型，独一无二的，具体参见后续ES6部分
-    console.log(arguments === test.arguments);
-
-    console.log(arguments.length);
+    console.log(arguments === wondow.arguments);//false
+    console.log(arguments.length);//4
     var args = Array.prototype.splice.call(arguments,0);
-    console.log(args);
+    console.log(args);//[1,2,3,4]
 };
 foo(1,2,3,4);
 
 
 
-//length是函数的实参个数
+//length是函数的形参个数
 //arguments.length是函数的形参的个数
 function foo(x,y,z){
     console.log(foo.length);
 }
-
+foo();
 
 //函数对象属性之caller 获取调用当前函数的函数。（整体调用caller为null）（函数内部调用） 例一
 function test() {
@@ -31,12 +30,13 @@ function test() {
 //caller属性只有当函数正在执行时才被定义
 console.log("没有调用的情况下test.caller为：",test.caller);//null
 //整体调用
-test();//test is called from ,call from the top level
+test();//test is called from the top level
 //函数内部调用
 function testOuter() {
     test();
 }
-testOuter();//call from the function testOuter
+testOuter();//test is called from the function testOuter
+
 //例二
 var obj = {
     foo1:function(){
@@ -159,3 +159,18 @@ var displayArgs2 = displayArgs.bind(emptyObject, 12, "a");
 // as the third and fourth parameters.
 displayArgs2("b", "c");// Output: 12 a b c
 
+
+//函数对象方法之 toString与valueOf 继承自Object.prototype的方法
+//返回对象的字符串表示形式。objectname.toString([radix])
+//关于toString与valueOf的详细内容参见JS对象相关章节
+var foo = function () { 
+    console.log("foo");
+};
+console.log(foo.toString()," ___ ",typeof foo.toString());//function(){console,log("foo");} string
+console.log(foo.valueOf()," ___ ",typeof foo.valueOf());//function(){console,log("foo");} function
+
+console.log(foo.hasOwnProperty("toString"));//false
+console.log(Object.prototype.hasOwnProperty("toString"));//true
+
+console.log(foo.hasOwnProperty("valueOf"));//false
+console.log(Object.prototype.hasOwnProperty("valueOf"));//true

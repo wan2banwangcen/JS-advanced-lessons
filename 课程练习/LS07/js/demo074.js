@@ -9,6 +9,11 @@ function foo(x) {
 console.trace("a:",a);
 foo(a);// step 1111
 console.trace("a:",a); // step 4444  a仍为1
+//输出
+//a:1
+//a:1 x:1
+//a:1 x:2
+//a:1
 
 
 //引用传递

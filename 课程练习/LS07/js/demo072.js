@@ -66,7 +66,6 @@ var bird = {
         console.log("i'm:"+this.name+" i can fly ___",m,n);
     }
 };
-
 var me = {
     name:"ABC"
 };
