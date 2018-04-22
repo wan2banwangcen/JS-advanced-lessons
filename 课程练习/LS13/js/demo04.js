@@ -14,17 +14,3 @@ Person.__proto__.__proto__===Object.prototype;//true
 Person.__proto__.__proto__.__proto__===null;//true
 
 
-var obj = {
-    x:12
- };
- obj.x;//12
- obj['x'];//12
-
- var obj={
-	x1:12,
-	x2:23,
-	x3:34
-}
-for(var i=0;i<4;i++){
-	console.log(obj['x'+i]);
-}//当遍历对象属性时，用ogj[]访问属性
