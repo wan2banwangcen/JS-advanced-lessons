@@ -25,7 +25,7 @@
     // div1.addEventListener("click",eventHandler,false);//第3个参数可选
     //div1.addEventListener("click",function(){
     //    console.log("xx");
-    //});//第二个函数会覆盖第一个函数
+    //});//两个都输出了，可以多次添加监听，不会覆盖之前的响应
     //div2.addEventListener("click",eventHandler);
     //div2.addEventListener("click",eventHandler,false);
     //div2.removeEventListener("click",eventHandler);//取消事件响应处理

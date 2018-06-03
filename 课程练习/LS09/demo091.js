@@ -4,9 +4,9 @@ var a=1;
 console.log(a);//1
 //上边的代码等价于 解析器严重的代码
 var a;
-console.log(a);
+console.log(a);//undefined
 a=1;
-console.log(a);
+console.log(a);//1
 
 //
 console.log(a,b);//undefined undefined
@@ -47,6 +47,7 @@ foo();
 var foo = function(){
     console.log("foo");
 };//报错 foo is not a function
+
 //
 console.log(foo);//undefined
 var foo = function(){
