@@ -1,5 +1,4 @@
 //XMLHttpRequest Get 请求
-//后端代码参见参见NodeAjaxTest01.js
 //实例一
 var xhr = new XMLHttpRequest();
 // if (!xhr) {

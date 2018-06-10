@@ -30,7 +30,7 @@ function fn() {
     bar();
     console.log(a,b,c,d);//d会报错，d是局部的，不能访问
 }
-fn();//500 20 200 600
+fn();
 //console.log(a,b,c,d);
 
 //例三
@@ -43,7 +43,7 @@ function fn() {
     function bar() {
         //bar局部作用域
         var a = 500;
-            d = 600;
+            d = 600;//此时定义的d相当于全局变量
     }
     bar();
     console.log(a,b,c,d);

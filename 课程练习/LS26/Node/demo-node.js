@@ -1,8 +1,7 @@
-//引入对应的模块
 var http = require("http");
 var url = require("url");
 
-http.createServer(function (req, res) {//req：前端请求的东西封装到req中  res:请求返回的东西封装到res中
+http.createServer(function (req, res) {
     //console.log(Object.keys(req),"___",Object.keys(res));
     //console.log("req.url：",req.url);
     // var getDataObj = url.parse(req.url,true).query;//parse函数中第二个参数为true的话返回一个对象

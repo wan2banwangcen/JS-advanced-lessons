@@ -41,10 +41,3 @@ document.onclick = function () {
     console.log("userId = ",userId);
     //alert("userId = "+userId);
 };
-//多人协同开发时问题，块作用域缺陷的问题可能会更加明显
-(function(){
-    var a=2,b=3;
-    if(a<b){
-        userId = 234;
-    }
-}());//userID=234
